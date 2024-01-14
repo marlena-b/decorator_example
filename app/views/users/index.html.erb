@@ -1,0 +1,11 @@
+<div >
+  <% @users.each do |user| %>
+    <div>
+      <p><strong>Name:</strong> <%= user.full_name %></p>
+      <p><strong>Email:</strong> <%= user.email %></p>
+      <%= link_to "Show this user", user %>
+    </div>
+    <hr/>
+  <% end %>
+</div>
+<%= link_to "New user", new_user_path %>
